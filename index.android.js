@@ -10,12 +10,27 @@
  */
 'use strict';
 
-var EdgeInsetsPropType = require('EdgeInsetsPropType');
+import React, { Component } from 'react';
+import {
+  NativeModules,
+  EdgeInsetsPropType,
+  ActivityIndicator,
+  ReactNative,
+  StyleSheet,
+  UIManager,
+  View,
+  ViewPropTypes,
+  requireNativeComponent,
+  resolveAssetSource
+} from 'react-native';
+import keyMirror from 'fbjs/lib/keyMirror';
+import {PropTypes,deprecatedPropType} from 'prop-types';
+/*var EdgeInsetsPropType = require('EdgeInsetsPropType');
 var ActivityIndicator = require('ActivityIndicator');
 var React = require('React');
 var PropTypes = require('prop-types');
 var ReactNative = require('ReactNative');
-import {NativeModules} from 'react-native';
+
 var StyleSheet = require('StyleSheet');
 var UIManager = require('UIManager');
 var View = require('View');
@@ -24,7 +39,7 @@ var ViewPropTypes = require('ViewPropTypes');
 var deprecatedPropType = require('deprecatedPropType');
 var keyMirror = require('fbjs/lib/keyMirror');
 var requireNativeComponent = require('requireNativeComponent');
-var resolveAssetSource = require('resolveAssetSource');
+var resolveAssetSource = require('resolveAssetSource');*/
 
 var RCT_WEBVIEW_REF = 'webview';
 
