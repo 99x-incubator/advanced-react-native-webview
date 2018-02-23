@@ -24,7 +24,7 @@ import {
   resolveAssetSource
 } from 'react-native';
 import keyMirror from 'fbjs/lib/keyMirror';
-import {PropTypes,deprecatedPropType} from 'prop-types';
+import PropTypes from 'prop-types';
 /*var EdgeInsetsPropType = require('EdgeInsetsPropType');
 var ActivityIndicator = require('ActivityIndicator');
 var React = require('React');
@@ -85,7 +85,7 @@ class AdvancedWebview extends React.Component {
     startInLoadingState: PropTypes.bool, // force WebView to show loadingView on first load
     style: ViewPropTypes.style,
 
-    html: deprecatedPropType(
+    /*html: deprecatedPropType(
       PropTypes.string,
       'Use the `source` prop instead.'
     ),
@@ -93,7 +93,7 @@ class AdvancedWebview extends React.Component {
     url: deprecatedPropType(
       PropTypes.string,
       'Use the `source` prop instead.'
-    ),
+    ),*/
 
     /**
      * Loads static html or a uri (with optional headers) in the WebView.
