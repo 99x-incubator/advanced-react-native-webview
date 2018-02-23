@@ -1,5 +1,8 @@
 {
-  "name": "advancedwebview",
+  "name": "advanced-react-native-webview",
   "version": "0.0.1",
-  "keywords": "react-native"
+  "keywords": ["react-native","advanced-webview"],
+  "peerDependencies": {
+    "react-native": ">=0.40"
+  }
 }
