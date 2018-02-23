@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Test/Desktop/react-native/AwesomeProject/node_modules/advanced-react-native-webview/android/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/Test/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/57e6a2f64f3ecb03c6072499ca6c47fb/res/drawable-ldrtl-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/Test/Desktop/react-native/AwesomeProject/node_modules/advanced-react-native-webview/android/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "/Users/Test/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/57e6a2f64f3ecb03c6072499ca6c47fb/res/drawable-ldrtl-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/Test/Desktop/react-native/AwesomeProject/node_modules/advanced-react-native-webview/android/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/Test/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/57e6a2f64f3ecb03c6072499ca6c47fb/res/drawable-ldrtl-xxxhdpi/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/Test/Desktop/react-native/AwesomeProject/node_modules/advanced-react-native-webview/android/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/Test/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/57e6a2f64f3ecb03c6072499ca6c47fb/res/drawable-ldrtl-xxxhdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
+    }
+]

@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/Test/Desktop/react-native/AwesomeProject/node_modules/advanced-react-native-webview/android/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-w500dp-v13/values-w500dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/Test/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/57e6a2f64f3ecb03c6072499ca6c47fb/res/values-w500dp/values-w500dp.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "283",
+                        "endColumns": "54",
+                        "endOffsets": "333"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/Test/Desktop/react-native/AwesomeProject/node_modules/advanced-react-native-webview/android/build/intermediates/res/merged/release/values-w500dp-v13/values-w500dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/Test/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/57e6a2f64f3ecb03c6072499ca6c47fb/res/values-w500dp/values-w500dp.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "283",
+                        "endColumns": "54",
+                        "endOffsets": "333"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        }
+    ]
+}
