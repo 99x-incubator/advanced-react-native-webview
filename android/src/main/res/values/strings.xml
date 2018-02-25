@@ -2,4 +2,8 @@
     <string name="down_desc">Downloading...</string>
     <string name="down_desc_done">Download Complete</string>
     <string name="down_desc_fail">Download Failed</string>
+    <string name="down_title">App Name</string>
+    <string name="no_down_img_permission">Please allow App Name to access storage to download the image</string>
+    <string name="no_up_img_permission">Please allow App Name to access storage to upload the image</string>
+    <string name="image_chooser">Image Chooser</string>
 </resources>

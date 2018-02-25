@@ -37,7 +37,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import facilit.net.helpdesk.R;
 import okhttp3.Call;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
@@ -48,7 +47,7 @@ import static android.app.Activity.RESULT_OK;
 import static android.content.ContentValues.TAG;
 import static android.content.Context.NOTIFICATION_SERVICE;
 
-public class CustomWebviewModule extends ReactContextBaseJavaModule implements ActivityEventListener {
+public class AdvancedWebviewModule extends ReactContextBaseJavaModule implements ActivityEventListener {
     private ValueCallback<Uri> mUploadMessage;
     private ValueCallback<Uri[]> mUploadCallbackAboveL;
     private String mCM;
@@ -61,23 +60,23 @@ public class CustomWebviewModule extends ReactContextBaseJavaModule implements A
     private String[] permissions = {Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
     @VisibleForTesting
-    public static final String REACT_CLASS = "CustomWebview";
+    public static final String REACT_CLASS = "AdvancedWebview";
     public ReactContext REACT_CONTEXT;
 
-    public CustomWebviewModule(ReactApplicationContext context){
+    public AdvancedWebviewModule(ReactApplicationContext context){
 
         super(context);
         REACT_CONTEXT = context;
         context.addActivityEventListener(this);
     }
 
-    private CustomWebviewPackage aPackage;
+    private AdvancedWebviewPackage aPackage;
 
-    public void setPackage(CustomWebviewPackage aPackage) {
+    public void setPackage(AdvancedWebviewPackage aPackage) {
         this.aPackage = aPackage;
     }
 
-    public CustomWebviewPackage getPackage() {
+    public AdvancedWebviewPackage getPackage() {
         return this.aPackage;
     }
 
@@ -218,7 +217,7 @@ public class CustomWebviewModule extends ReactContextBaseJavaModule implements A
             return true;
         }
         boolean result = true;
-        final CustomWebviewModule module = this.aPackage.getModule();
+        final AdvancedWebviewModule module = this.aPackage.getModule();
         for (String permission:permissions){
             if (ContextCompat.checkSelfPermission(module.getActivity(),
                     permission)
@@ -243,7 +242,7 @@ public class CustomWebviewModule extends ReactContextBaseJavaModule implements A
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M){
             return true;
         }
-        final CustomWebviewModule module = this.aPackage.getModule();
+        final AdvancedWebviewModule module = this.aPackage.getModule();
 
         if(ContextCompat.checkSelfPermission(module.getActivity(),
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -274,7 +273,7 @@ public class CustomWebviewModule extends ReactContextBaseJavaModule implements A
 
 
     public void downloadImage(String url){
-        final CustomWebviewModule module = this.aPackage.getModule();
+        final AdvancedWebviewModule module = this.aPackage.getModule();
         displayNotification(NOTIFICATION_ID,module.getActivity().getResources().getString(R.string.down_title),module.getActivity().getResources().getString(R.string.down_desc),android.R.drawable.stat_sys_download,null);
         try {
             OkHttpClient client = new OkHttpClient();
@@ -320,9 +319,9 @@ public class CustomWebviewModule extends ReactContextBaseJavaModule implements A
     }
 
     public void displayNotification(int mNotificationId,String title,String description,int icon,Uri imageUri){
-        final CustomWebviewModule module = this.aPackage.getModule();
+        final AdvancedWebviewModule module = this.aPackage.getModule();
         NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(module.getActivity(),"default")
+                new NotificationCompat.Builder(module.getActivity())
                         .setSmallIcon(icon)
                         .setContentTitle(title)
                         .setAutoCancel(true)

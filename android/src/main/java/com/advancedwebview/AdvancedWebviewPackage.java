@@ -11,33 +11,33 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class CustomWebviewPackage implements ReactPackage {
-    private CustomWebviewManager manager;
-    private CustomWebviewModule module;
+public class AdvancedWebviewPackage implements ReactPackage {
+    private AdvancedWebviewManager manager;
+    private AdvancedWebviewModule module;
 
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
 
     @Override public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        manager = new CustomWebviewManager();
+        manager = new AdvancedWebviewManager();
         manager.setPackage(this);
         return Arrays.<ViewManager>asList(manager);
     }
 
     @Override public List<NativeModule> createNativeModules( ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        module = new CustomWebviewModule(reactContext);
+        module = new AdvancedWebviewModule(reactContext);
         module.setPackage(this);
         modules.add(module);
         return modules;
     }
 
-    public CustomWebviewManager getManager(){
+    public AdvancedWebviewManager getManager(){
         return manager;
     }
 
-    public CustomWebviewModule getModule(){
+    public AdvancedWebviewModule getModule(){
         return module;
     }
 }

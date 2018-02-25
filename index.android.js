@@ -20,11 +20,11 @@ import {
   UIManager,
   View,
   ViewPropTypes,
-  requireNativeComponent,
-  resolveAssetSource
+  requireNativeComponent
 } from 'react-native';
 import keyMirror from 'fbjs/lib/keyMirror';
 import PropTypes from 'prop-types';
+import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 /*var EdgeInsetsPropType = require('EdgeInsetsPropType');
 var ActivityIndicator = require('ActivityIndicator');
 var React = require('React');

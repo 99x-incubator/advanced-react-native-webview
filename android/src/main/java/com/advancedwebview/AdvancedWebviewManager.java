@@ -15,14 +15,14 @@ import com.facebook.react.views.webview.ReactWebViewManager;
 /**
  * Created by ydq on 16/4/12.
  */
-public class CustomWebviewManager extends ReactWebViewManager {
+public class AdvancedWebviewManager extends ReactWebViewManager {
 
     private ValueCallback<Uri> mUM;
     private final static int FCR=1;
 
     public WebView webview = null;
 
-    private CustomWebviewPackage aPackage;
+    private AdvancedWebviewPackage aPackage;
     public String getName() {
 
         return "CustomWebview";
@@ -32,7 +32,7 @@ public class CustomWebviewManager extends ReactWebViewManager {
     public void uploadEnabledAndroid(WebView view, boolean enabled) {
         if(enabled) {
             webview = view;
-            final CustomWebviewModule module = this.aPackage.getModule();
+            final AdvancedWebviewModule module = this.aPackage.getModule();
             view.setWebChromeClient(new WebChromeClient(){
 
                 //For Android 3.0+
@@ -85,7 +85,7 @@ public class CustomWebviewManager extends ReactWebViewManager {
     @ReactProp(name = "downloadEnabledAndroid")
     public void downloadEnabledAndroid(WebView view, boolean enabled) {
         if(enabled) {
-            final CustomWebviewModule module = this.aPackage.getModule();
+            final AdvancedWebviewModule module = this.aPackage.getModule();
             view.setDownloadListener(new DownloadListener() {
 
                 @Override
@@ -126,11 +126,11 @@ public class CustomWebviewManager extends ReactWebViewManager {
     }
 
 
-    public void setPackage(CustomWebviewPackage aPackage){
+    public void setPackage(AdvancedWebviewPackage aPackage){
         this.aPackage = aPackage;
     }
 
-    public CustomWebviewPackage getPackage(){
+    public AdvancedWebviewPackage getPackage(){
         return this.aPackage;
     }
 }
