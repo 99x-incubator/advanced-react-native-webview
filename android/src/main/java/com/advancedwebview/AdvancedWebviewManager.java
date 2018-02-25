@@ -25,7 +25,7 @@ public class AdvancedWebviewManager extends ReactWebViewManager {
     private AdvancedWebviewPackage aPackage;
     public String getName() {
 
-        return "CustomWebview";
+        return "AdvancedWebview";
     }
 
     @ReactProp(name = "uploadEnabledAndroid")
