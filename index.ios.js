@@ -37,16 +37,19 @@ import {
   ActivityIndicator,
   ReactNative,
   StyleSheet,
+  Text,
   UIManager,
   View,
   ViewPropTypes,
+  ScrollView,
   requireNativeComponent
 } from 'react-native';
+import invariant from 'fbjs/lib/invariant';
 import keyMirror from 'fbjs/lib/keyMirror';
 import PropTypes from 'prop-types';
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
-var RCTWebViewManager = require('NativeModules').WebViewManager;
+var RCTWebViewManager = NativeModules.WebViewManager;
 
 var BGWASH = 'rgba(255,255,255,0.8)';
 var RCT_WEBVIEW_REF = 'webview';
@@ -147,7 +150,7 @@ class AdvancedWebView extends React.Component {
   static propTypes = {
     ...ViewPropTypes,
 
-    html: deprecatedPropType(
+    /*html: deprecatedPropType(
       PropTypes.string,
       'Use the `source` prop instead.'
     ),
@@ -155,7 +158,7 @@ class AdvancedWebView extends React.Component {
     url: deprecatedPropType(
       PropTypes.string,
       'Use the `source` prop instead.'
-    ),
+    ),*/
 
     /**
      * Loads static html or a uri (with optional headers) in the WebView.
@@ -522,7 +525,7 @@ class AdvancedWebView extends React.Component {
         dataDetectorTypes={this.props.dataDetectorTypes}
         onImageDownloadComplete={this._onImageDownloadComplete}
         onImageDownload={this._onImageDownload}
-        pullToRefresh={this.PropTypes.pullToRefresh}
+        pullToRefresh={this.props.pullToRefresh}
         {...nativeConfig.props}
       />;
 
@@ -680,7 +683,7 @@ class AdvancedWebView extends React.Component {
   }
 }
 
-var RCTWebView = requireNativeComponent('CustomWebview', AdvancedWebView, AdvancedWebView.extraNativeComponentConfig);
+var RCTWebView = requireNativeComponent('AdvancedWebview', AdvancedWebView, AdvancedWebView.extraNativeComponentConfig);
 
 var styles = StyleSheet.create({
   container: {
@@ -719,3 +722,21 @@ var styles = StyleSheet.create({
 });
 
 module.exports = AdvancedWebView;
+
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *
+ */
+
+function processDecelerationRate(decelerationRate) {
+  if (decelerationRate === 'normal') {
+    decelerationRate = 0.998;
+  } else if (decelerationRate === 'fast') {
+    decelerationRate = 0.99;
+  }
+  return decelerationRate;
+}
