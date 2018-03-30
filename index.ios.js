@@ -522,7 +522,7 @@ class AdvancedWebView extends React.Component {
         dataDetectorTypes={this.props.dataDetectorTypes}
         onImageDownloadComplete={this._onImageDownloadComplete}
         onImageDownload={this._onImageDownload}
-        pullToRefresh={true}
+        pullToRefresh={this.PropTypes.pullToRefresh}
         {...nativeConfig.props}
       />;
 
