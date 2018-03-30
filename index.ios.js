@@ -11,7 +11,7 @@
  */
 'use strict';
 
-var ActivityIndicator = require('ActivityIndicator');
+/*var ActivityIndicator = require('ActivityIndicator');
 var EdgeInsetsPropType = require('EdgeInsetsPropType');
 var React = require('React');
 var PropTypes = require('prop-types');
@@ -28,7 +28,23 @@ var invariant = require('fbjs/lib/invariant');
 var keyMirror = require('fbjs/lib/keyMirror');
 var processDecelerationRate = require('processDecelerationRate');
 var requireNativeComponent = require('requireNativeComponent');
-var resolveAssetSource = require('resolveAssetSource');
+var resolveAssetSource = require('resolveAssetSource');*/
+
+import React, { Component } from 'react';
+import {
+  NativeModules,
+  EdgeInsetsPropType,
+  ActivityIndicator,
+  ReactNative,
+  StyleSheet,
+  UIManager,
+  View,
+  ViewPropTypes,
+  requireNativeComponent
+} from 'react-native';
+import keyMirror from 'fbjs/lib/keyMirror';
+import PropTypes from 'prop-types';
+import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
 var RCTWebViewManager = require('NativeModules').WebViewManager;
 
@@ -92,7 +108,7 @@ var defaultRenderError = (errorDomain, errorCode, errorDesc) => (
 );
 
 /**
- * `AdvancedWebview` renders web content in a native view.
+ * `AdvancedWebView` renders web content in a native view.
  *
  *```
  * import React, { Component } from 'react';
@@ -113,7 +129,7 @@ var defaultRenderError = (errorDomain, errorCode, errorDesc) => (
  * You can use this component to navigate back and forth in the web view's
  * history and configure various properties for the web content.
  */
-class AdvancedWebview extends React.Component {
+class AdvancedWebView extends React.Component {
   static JSNavigationScheme = JSNavigationScheme;
   static NavigationType = NavigationType;
   static get extraNativeComponentConfig() {
@@ -369,6 +385,12 @@ class AdvancedWebview extends React.Component {
      * Function which notifies when an image has been downloaded from the Webview
      */
     onImageDownloadComplete:PropTypes.func,
+     /**
+     * Boolean value that determines whether pull to refres should be enabled
+     * The default value is `true`.
+     * @platform ios
+     */
+    pullToRefresh: PropTypes.bool,
 
     /**
      * Specifies the mixed content mode. i.e WebView will allow a secure origin to load content from any other origin.
@@ -500,15 +522,16 @@ class AdvancedWebview extends React.Component {
         dataDetectorTypes={this.props.dataDetectorTypes}
         onImageDownloadComplete={this._onImageDownloadComplete}
         onImageDownload={this._onImageDownload}
+        pullToRefresh={true}
         {...nativeConfig.props}
       />;
 
-    return (
-      <View style={styles.container}>
-        {webView}
-        {otherView}
-      </View>
-    );
+      return (
+        <View style={styles.container}>
+          {webView}
+          {otherView}
+        </View>
+      );
   }
 
   /**
@@ -657,7 +680,7 @@ class AdvancedWebview extends React.Component {
   }
 }
 
-var RCTWebView = requireNativeComponent('AdvancedWebview', AdvancedWebview, AdvancedWebview.extraNativeComponentConfig);
+var RCTWebView = requireNativeComponent('CustomWebview', AdvancedWebView, AdvancedWebView.extraNativeComponentConfig);
 
 var styles = StyleSheet.create({
   container: {
@@ -695,4 +718,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = AdvancedWebview;
+module.exports = AdvancedWebView;
