@@ -193,7 +193,10 @@ public class AdvancedWebviewModule extends ReactContextBaseJavaModule implements
                             uploadImage(mUploadCallbackAboveL);
                         }
                     } else {
+                        getMUploadCallbackAboveL().onReceiveValue(new Uri[]{});
+                        setmUploadCallbackAboveL(null);
                         Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.no_up_img_permission), Toast.LENGTH_LONG).show();
+                        return false;
                     }
                     return true;
                 }
@@ -231,9 +234,6 @@ public class AdvancedWebviewModule extends ReactContextBaseJavaModule implements
             PermissionAwareActivity activity = getPermissionAwareActivity();
 
             activity.requestPermissions(permissions, MY_PERMISSIONS_REQUEST_ALL,listener);
-            /*ActivityCompat.requestPermissions(module.getActivity(),
-                    permissions,
-                    module.MY_PERMISSIONS_REQUEST_ALL);*/
         }
         return result;
     }
@@ -250,9 +250,6 @@ public class AdvancedWebviewModule extends ReactContextBaseJavaModule implements
             PermissionAwareActivity activity = getPermissionAwareActivity();
 
             activity.requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_STORAGE,listener);
-            /*ActivityCompat.requestPermissions(module.getActivity(),
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    MY_PERMISSIONS_REQUEST_STORAGE);*/
             return false;
         }else {
             return true;

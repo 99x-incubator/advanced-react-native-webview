@@ -12,9 +12,6 @@ import android.webkit.WebView;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.views.webview.ReactWebViewManager;
 
-/**
- * Created by ydq on 16/4/12.
- */
 public class AdvancedWebviewManager extends ReactWebViewManager {
 
     private ValueCallback<Uri> mUM;

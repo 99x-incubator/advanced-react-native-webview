@@ -25,21 +25,7 @@ import {
 import keyMirror from 'fbjs/lib/keyMirror';
 import PropTypes from 'prop-types';
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
-/*var EdgeInsetsPropType = require('EdgeInsetsPropType');
-var ActivityIndicator = require('ActivityIndicator');
-var React = require('React');
-var PropTypes = require('prop-types');
-var ReactNative = require('ReactNative');
 
-var StyleSheet = require('StyleSheet');
-var UIManager = require('UIManager');
-var View = require('View');
-var ViewPropTypes = require('ViewPropTypes');
-
-var deprecatedPropType = require('deprecatedPropType');
-var keyMirror = require('fbjs/lib/keyMirror');
-var requireNativeComponent = require('requireNativeComponent');
-var resolveAssetSource = require('resolveAssetSource');*/
 
 var RCT_WEBVIEW_REF = 'webview';
 
@@ -250,13 +236,21 @@ class AdvancedWebview extends React.Component {
     urlPrefixesForDefaultIntent: PropTypes.arrayOf(PropTypes.string),
 
     /**
-         * Make upload file available
-         */
-        uploadEnabledAndroid: PropTypes.bool,
-        /**
-         * Make download file available
-         */
-        downloadEnabledAndroid: PropTypes.bool,
+     * Make upload file available
+     */
+    uploadEnabledAndroid: PropTypes.bool,
+    /**
+     * Make download file available
+     */
+    downloadEnabledAndroid: PropTypes.bool,
+    /**
+     * A RefreshControl component, used to provide pull-to-refresh
+     * functionality for the ScrollView. Only works for vertical ScrollViews
+     * (`horizontal` prop must be `false`).
+     *
+     * See [RefreshControl](docs/refreshcontrol.html).
+     */
+    refreshControl: PropTypes.element,
   };
 
   static defaultProps = {
@@ -343,17 +337,29 @@ class AdvancedWebview extends React.Component {
         mixedContentMode={this.props.mixedContentMode}
         saveFormDataDisabled={this.props.saveFormDataDisabled}
         urlPrefixesForDefaultIntent={this.props.urlPrefixesForDefaultIntent}
-        uploadEnabledAndroid={true}
-        downloadEnabledAndroid={true}
+        uploadEnabledAndroid={this.props.uploadEnabledAndroid}
+        downloadEnabledAndroid={this.props.downloadEnabledAndroid}
         {...nativeConfig.props}
       />;
 
-    return (
-      <View style={styles.container}>
-        {webView}
-        {otherView}
-      </View>
-    );
+      const refreshControl = this.props.refreshControl;
+      if(refreshControl){
+        return React.cloneElement(
+          refreshControl,
+          {style: this.props.style},
+          <View style={styles.container}>
+            {webView}
+            {otherView}
+          </View>
+        );
+      }else{
+        return (
+          <View style={styles.container}>
+            {webView}
+            {otherView}
+          </View>
+        );  
+    }
   }
 
   goForward = () => {
