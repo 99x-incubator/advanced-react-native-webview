@@ -14,11 +14,11 @@
 #import <React/RCTUIManager.h>
 #import <React/UIView+React.h>
 
-@interface CustomWebviewManager () <RCTWebViewDelegate>
+@interface AdvancedWebviewManager () <RCTWebViewDelegate>
 
 @end
 
-@implementation CustomWebviewManager
+@implementation AdvancedWebviewManager
 {
   NSConditionLock *_shouldStartLoadLock;
   BOOL _shouldStartLoad;
