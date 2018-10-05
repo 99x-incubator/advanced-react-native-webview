@@ -5,6 +5,12 @@
     <label>name:
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
+    <br /> <br />
+    <label>Profile Picture:
+      <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+    </label>
   </div>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
