@@ -22,7 +22,7 @@ Import `advanced-react-native-webview` in your JS file.
 
 ## Contribution
 
-Issues are welcome. Please add a screenshot of you bug and a code snippet. Quickest way to solve issue is to reproduce it in one of the examples.
+Issues are welcome. Please add a screenshot of your bug and a code snippet. Quickest way to solve issue is to reproduce it in one of the examples.
 
 Pull requests are welcome. If you want to do something big it is best to create an issue and discuss it first.
 
