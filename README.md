@@ -1,5 +1,5 @@
-[ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/crazycodeboy/react-native-splash-screen/pulls)
-[![License MIT](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/crazycodeboy/react-native-check-box/master/LICENSE)
+[ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/99xt-incubator/advanced-react-native-webview/pulls)
+[![License MIT](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://github.com/99xt-incubator/advanced-react-native-webview/blob/master/LICENSE)
 
 # advanced-react-native-webview
 This is a web view library for react native which can warp web application inside a react native app. Works for both android and ios.
