@@ -15,11 +15,11 @@ static const CGFloat kloadingTimingOffset = 0.1;
 static const CGFloat kdisappearDuration = 1.2;
 static const CGFloat krelativeHeightFactor = 2.f/5.f;
 
-typedef enum {
+/*typedef enum {
     CBStoreHouseRefreshControlStateIdle = 0,
     CBStoreHouseRefreshControlStateRefreshing = 1,
     CBStoreHouseRefreshControlStateDisappearing = 2
-} CBStoreHouseRefreshControlState;
+} CBStoreHouseRefreshControlState;*/
 
 NSString *const startPointKey = @"startPoints";
 NSString *const endPointKey = @"endPoints";
@@ -28,7 +28,7 @@ NSString *const yKey = @"y";
 
 @interface CBStoreHouseRefreshControl () <UIScrollViewDelegate>
 
-@property (nonatomic) CBStoreHouseRefreshControlState state;
+//@property (nonatomic) CBStoreHouseRefreshControlState state;
 @property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, strong) NSArray *barItems;
 @property (nonatomic, strong) CADisplayLink *displayLink;
@@ -237,7 +237,7 @@ NSString *const yKey = @"y";
         [UIView animateWithDuration:kloadingIndividualAnimationTiming animations:^{
             barItem.alpha = kbarDarkAlpha;
         } completion:^(BOOL finished) {
-            
+          
         }];
         
         BOOL isLastOne;
@@ -247,7 +247,8 @@ NSString *const yKey = @"y";
             isLastOne = barItem.tag == self.barItems.count-1;
             
         if (isLastOne && self.state == CBStoreHouseRefreshControlStateRefreshing) {
-            [self startLoadingAnimation];
+          [self startLoadingAnimation];
+          
         }
     }
 }
