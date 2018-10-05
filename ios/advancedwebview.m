@@ -7,7 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import "Advancedwebview.h"
+#import "advancedwebview.h"
 
 #import <UIKit/UIKit.h>
 
@@ -18,7 +18,7 @@
 #import <React/RCTUtils.h>
 #import <React/RCTView.h>
 #import <React/UIView+React.h>
-#import <AFNetworking/AFURLSessionManager.h>
+#import "AFNetworking/AFURLSessionManager.h"
 #import "CBStoreHouseRefreshControl.h"
 
 //NSString *const RCTJSNavigationScheme2 = @"react-js-navigation";
