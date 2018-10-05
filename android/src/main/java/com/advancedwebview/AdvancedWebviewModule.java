@@ -119,6 +119,9 @@ public class AdvancedWebviewModule extends ReactContextBaseJavaModule implements
         mUploadMessage = uploadMessage;
     }
 
+    public ValueCallback<Uri[]> getMUploadCallbackAboveL(){
+        return this.mUploadCallbackAboveL;
+    }
 
     public void setmUploadCallbackAboveL(ValueCallback<Uri[]> mUploadCallbackAboveL) {
         this.mUploadCallbackAboveL = mUploadCallbackAboveL;
