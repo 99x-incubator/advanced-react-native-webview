@@ -12,7 +12,7 @@
 		521C83C92167F247004A6266 /* CBStoreHouseRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 521C83C72167F246004A6266 /* CBStoreHouseRefreshControl.m */; };
 		528B49672167C24B00D68B5C /* advancedwebviewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528B49662167C24B00D68B5C /* advancedwebviewManager.m */; };
 		528B49782167C9F500D68B5C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528B496C2167C9F500D68B5C /* AFHTTPSessionManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		528B49792167C9F500D68B5C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528B496F2167C9F500D68B5C /* AFNetworkReachabilityManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		528B49792167C9F500D68B5C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528B496F2167C9F500D68B5C /* AFNetworkReachabilityManager.m */; };
 		528B497A2167C9F500D68B5C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 528B49712167C9F500D68B5C /* AFSecurityPolicy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		528B497B2167C9F500D68B5C /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 528B49732167C9F500D68B5C /* AFURLRequestSerialization.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		528B497C2167C9F500D68B5C /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 528B49752167C9F500D68B5C /* AFURLResponseSerialization.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -273,7 +273,7 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -290,7 +290,7 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
