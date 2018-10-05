@@ -19,7 +19,7 @@
 #import <React/RCTView.h>
 #import <React/UIView+React.h>
 #import "AFNetworking/AFURLSessionManager.h"
-#import "CBStoreHouseRefreshControl.h"
+#import "CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.h"
 
 //NSString *const RCTJSNavigationScheme2 = @"react-js-navigation";
 
