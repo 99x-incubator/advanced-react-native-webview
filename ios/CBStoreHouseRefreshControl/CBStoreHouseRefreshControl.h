@@ -27,6 +27,14 @@
                           reverseLoadingAnimation:(BOOL)reverseLoadingAnimation
                           internalAnimationFactor:(CGFloat)internalAnimationFactor;
 
+typedef enum {
+  CBStoreHouseRefreshControlStateIdle = 0,
+  CBStoreHouseRefreshControlStateRefreshing = 1,
+  CBStoreHouseRefreshControlStateDisappearing = 2
+} CBStoreHouseRefreshControlState;
+
+@property (nonatomic) CBStoreHouseRefreshControlState state;
+
 - (void)scrollViewDidScroll;
 
 - (void)scrollViewDidEndDragging;
