@@ -28,4 +28,4 @@ Pull requests are welcome. If you want to do something big it is best to create 
 
 ---
 
-**[MIT Licensed](https://github.com/crazycodeboy/react-native-splash-screen/blob/master/LICENSE)**
+**[MIT Licensed](https://github.com/99xt-incubator/advanced-react-native-webview/blob/master/LICENSE)**
