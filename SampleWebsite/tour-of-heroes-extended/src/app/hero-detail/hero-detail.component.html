@@ -1,7 +1,9 @@
 <div *ngIf="hero">
   <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
+  <div><span>ID: </span>{{hero.id}}</div>
   <div>
+  <div><br /><img src="assets/images/sample-profile-picture.jpg" alt="Profile Picture" height="150" width="200"></div>
+  <br /> <br />
     <label>name:
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
