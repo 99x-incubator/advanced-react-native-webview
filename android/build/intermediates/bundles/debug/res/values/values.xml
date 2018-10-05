@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="down_desc">Downloading...</string>
-    <string name="down_desc_done">Download Complete</string>
-    <string name="down_desc_fail">Download Failed</string>
-</resources>
