@@ -41,7 +41,6 @@ import {
   UIManager,
   View,
   ViewPropTypes,
-  ScrollView,
   requireNativeComponent
 } from 'react-native';
 import invariant from 'fbjs/lib/invariant';
@@ -244,7 +243,7 @@ class AdvancedWebView extends React.Component {
      *   - fast: 0.99 (the default for iOS web view)
      * @platform ios
      */
-    decelerationRate: ScrollView.propTypes.decelerationRate,
+    decelerationRate: PropTypes.number,
     /**
      * Boolean value that determines whether scrolling is enabled in the
      * `WebView`. The default value is `true`.
