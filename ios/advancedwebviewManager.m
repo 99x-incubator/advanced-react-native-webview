@@ -70,10 +70,10 @@ RCT_EXPORT_METHOD(goBack:(nonnull NSNumber *)reactTag)
 
 RCT_EXPORT_METHOD(goForward:(nonnull NSNumber *)reactTag)
 {
-  [self.bridge.uiManager addUIBlock:^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, UIView *> *viewRegistry) {
-    id view = viewRegistry[reactTag];
+  [self.bridge.uiManager addUIBlock:^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, Advancedwebview *> *viewRegistry) {
+    Advancedwebview *view = viewRegistry[reactTag];
     if (![view isKindOfClass:[Advancedwebview class]]) {
-      RCTLogError(@"Invalid view returned from registry, expecting RCTWebView, got: %@", view);
+      RCTLogError(@"Invalid view returned from registry, expecting RNCWKWebView, got: %@", view);
     } else {
       [view goForward];
     }
