@@ -12,8 +12,8 @@ This is a web view library for react native which can warp web application insid
 - [Contribution](#contribution)
 
 ## Installation
-Run `npm i git+https://github.com/99xt-incubator/advanced-react-native-webview`
-`react-native link advanced-react-native-webview`
+Run `npm i git+https://github.com/99xt-incubator/advanced-react-native-webview` <br />
+Link `react-native link advanced-react-native-webview`
 
 ## Getting-started
 
