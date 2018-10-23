@@ -13,6 +13,7 @@ This is a web view library for react native which can warp web application insid
 
 ## Installation
 Run `npm i git+https://github.com/99xt-incubator/advanced-react-native-webview`
+`react-native link advanced-react-native-webview`
 
 ## Getting-started
 
