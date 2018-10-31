@@ -1,0 +1,5 @@
+rootProject.name = 'sample_app'
+include ':advanced-react-native-webview'
+project(':advanced-react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/advanced-react-native-webview/android')
+
+include ':app'
